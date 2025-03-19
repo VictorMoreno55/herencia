@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace herencia
 {
-    internal class Alumno
+    internal class Alumno:persona
     {
         public Alumno() { }
 
-        public Alumno(int matricula, string carrera)
+        public Alumno(string nombre, int edad, string genero,int matricula, string carrera)
+        :base(nombre,edad,genero)
         {
             Matricula = matricula;
             Carrera = carrera;
@@ -18,5 +19,6 @@ namespace herencia
 
         public int Matricula { get; set; }
         public string Carrera { get; set; }
+
     }
 }
