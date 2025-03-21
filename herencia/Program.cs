@@ -30,15 +30,15 @@ namespace herencia
 
                         break;
                     case Menu.ContarCoche:
-                        
-                        //Console.WriteLine(program.ContarCoche);
+
+                        Console.WriteLine($"{ program.ContarCoche()}");
 
                         break;
                     case Menu.EliminarCoche:
                         Console.WriteLine("Dame Marca");
                         string Marca = Console.ReadLine();
-                        program.EliminarCoche();
-
+                        Console.WriteLine($"{ program.EliminarCoche(string,Marca)}");
+                        
                         break;
                     case Menu.ActualizarCoche:
                         Console.WriteLine("¿Qué coche deseas actualizar (Ingresa la Marca)");

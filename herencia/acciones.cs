@@ -28,6 +28,7 @@ namespace herencia
             int Puertas = Convert.ToInt32(Console.ReadLine());
 
             DiccCoche.Add(ID, new VehiculoCoche(vca.ID_Vehiculo, vca.Marca, vca.Modelo, vca.Año, vca.Puertas));
+            DiccCoche.Add(ID, vca);
         }
         public void MostrarCoche()
         {
@@ -42,9 +43,9 @@ namespace herencia
         }
         public void ContarCoche()
         {
-            
+            Console.WriteLine($"Total Coches:{DiccCoche.Count}");
         }
-        public void EliminarCoche()
+        public void EliminarCoche(string marca)
         {
             Console.WriteLine("Dame ID a eliminar");
             int id = Convert.ToInt32(Console.ReadLine());
@@ -83,7 +84,8 @@ namespace herencia
             Console.WriteLine("CapacidadDeCarga");
             int Puertas = Convert.ToInt32(Console.ReadLine());
 
-            DiccCoche.Add(ID, new VehiculoCoche(vco.ID_Vehiculo, vco.Marca, vco.Modelo, vco.Año, vco.CapacidadDeCarga));
+            DiccCamion.Add(ID, new VehiculoCamion(vco.ID_Vehiculo, vco.Marca, vco.Modelo, vco.Año, vco.CapacidadDeCarga));
+            DiccCamion.Add(ID, vco);
         }
         public void MostrarCamion()
         {
@@ -95,6 +97,10 @@ namespace herencia
                 Console.WriteLine($"El año es: {o.Value.Año}");
                 Console.WriteLine($"Tiene capacidad de carga: {o.Value.CapacidadDeCarga} ");
             }
+        }
+        public void ContarCamiones()
+        {
+            Console.WriteLine($"Total Camiones:{DiccCamion.Count}");
         }
         public void EliminarCaminion()
         {
@@ -119,6 +125,8 @@ namespace herencia
             Camion.Value.Año = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Dame Puertas");
             Camion.Value.CapacidadDeCarga = Convert.ToInt32(Console.ReadLine());
+
+            DiccCamion.Add(ID, new VehiculoCamion(vco.ID_Vehiculo, vco.Marca, vco.Modelo, vco.Año, vco.CapacidadDeCarga));
 
         }
     }
