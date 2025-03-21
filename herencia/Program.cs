@@ -22,24 +22,51 @@ namespace herencia
                 switch (Men())
                 {
                     case Menu.AgregarCoche:
+                        program.AgregarCoche();
+
                         break;
                     case Menu.MostrarCoche:
+                        program.MostrarCoche();
+
                         break;
                     case Menu.ContarCoche:
+                        
+                        //Console.WriteLine(program.ContarCoche);
+
                         break;
                     case Menu.EliminarCoche:
+                        Console.WriteLine("Dame Marca");
+                        string Marca = Console.ReadLine();
+                        program.EliminarCoche();
+
                         break;
                     case Menu.ActualizarCoche:
+                        Console.WriteLine("¿Qué coche deseas actualizar (Ingresa la Marca)");
+                        string actu = Console.ReadLine();
+
+                        program.ActualizarCoche(actu);
+
                         break;
                     case Menu.AgregarCamion:
+                        program.AgregarCamion();
+
                         break;
                     case Menu.MostrarCamion:
+                        program.MostrarCamion();
+
                         break;
                     case Menu.ContarCamion:
+                        
                         break;
                     case Menu.EliminarCamion:
+
                         break;
                     case Menu.ActualizarCamion:
+                        Console.WriteLine("¿Qué camion deseas actualizar (Ingresa la Marca");
+                        string actua = Console.ReadLine();
+
+                        program.ActualizarCamion(actua);
+
                         break;
                     default:
                         break;

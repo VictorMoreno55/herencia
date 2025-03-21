@@ -40,13 +40,17 @@ namespace herencia
                 Console.WriteLine($"Tiene: {a.Value.Puertas} Puertas");
             }
         }
+        public void ContarCoche()
+        {
+            
+        }
         public void EliminarCoche()
         {
             Console.WriteLine("Dame ID a eliminar");
             int id = Convert.ToInt32(Console.ReadLine());
             DiccCoche.Remove(id);
         }
-        public void ActualizarCoche()
+        public void ActualizarCoche(string nombremarcas)
         {
             Console.WriteLine("Dame ID");
             int ID = Convert.ToInt32(Console.ReadLine());
@@ -98,7 +102,7 @@ namespace herencia
             int id = Convert.ToInt32(Console.ReadLine());
             DiccCamion.Remove(id);
         }
-        public void ActualizarCamion()
+        public void ActualizarCamion(string nombremarca)
         {
             Console.WriteLine("Dame ID");
             int ID = Convert.ToInt32(Console.ReadLine());
