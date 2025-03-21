@@ -40,6 +40,32 @@ namespace herencia
                 Console.WriteLine($"Tiene: {a.Value.Puertas} Puertas");
             }
         }
+        public void EliminarCoche()
+        {
+            Console.WriteLine("Dame ID a eliminar");
+            int id = Convert.ToInt32(Console.ReadLine());
+            DiccCoche.Remove(id);
+        }
+        public void ActualizarCoche()
+        {
+            Console.WriteLine("Dame ID");
+            int ID = Convert.ToInt32(Console.ReadLine());
+            
+            var coche = DiccCoche.FirstOrDefault(x => x.Value.ID_Vehiculo == ID);
+
+            Console.WriteLine("Dame nuevo ID");
+            coche.Value.ID_Vehiculo = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Dame Marca");
+            coche.Value.Marca = Console.ReadLine();
+            Console.WriteLine("Dame Modelo");
+            coche.Value.Modelo = Console.ReadLine();
+            Console.WriteLine("Dame Año");
+            coche.Value.Año = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Dame Puertas");
+            coche.Value.Puertas = Convert.ToInt32(Console.ReadLine());
+
+
+        }
         public void AgregarCamion()
         {
             Console.WriteLine("Dame Matricula");
@@ -65,6 +91,31 @@ namespace herencia
                 Console.WriteLine($"El año es: {o.Value.Año}");
                 Console.WriteLine($"Tiene capacidad de carga: {o.Value.CapacidadDeCarga} ");
             }
+        }
+        public void EliminarCaminion()
+        {
+            Console.WriteLine("Dame ID a eliminar");
+            int id = Convert.ToInt32(Console.ReadLine());
+            DiccCamion.Remove(id);
+        }
+        public void ActualizarCamion()
+        {
+            Console.WriteLine("Dame ID");
+            int ID = Convert.ToInt32(Console.ReadLine());
+
+            var Camion = DiccCamion.FirstOrDefault(x => x.Value.ID_Vehiculo == ID);
+
+            Console.WriteLine("Dame nuevo ID");
+            Camion.Value.ID_Vehiculo = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Dame Marca");
+            Camion.Value.Marca = Console.ReadLine();
+            Console.WriteLine("Dame Modelo");
+            Camion.Value.Modelo = Console.ReadLine();
+            Console.WriteLine("Dame Año");
+            Camion.Value.Año = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Dame Puertas");
+            Camion.Value.CapacidadDeCarga = Convert.ToInt32(Console.ReadLine());
+
         }
     }
 
