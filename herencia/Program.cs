@@ -8,9 +8,11 @@ namespace herencia
 {
     internal class Program
     {
+        private enum Menu()
+            
         static void Main(string[] args)
         {
-
+            
 
         }
     }
