@@ -31,20 +31,15 @@ namespace herencia
                         break;
                     case Menu.ContarCoche:
 
-                        Console.WriteLine($"{ program.ContarCoche()}");
+                        program.ContarCoche();
 
                         break;
                     case Menu.EliminarCoche:
-                        Console.WriteLine("Dame Marca");
-                        string Marca = Console.ReadLine();
-                        Console.WriteLine($"{ program.EliminarCoche(string,Marca)}");
+                        program.EliminarCoche();
                         
                         break;
                     case Menu.ActualizarCoche:
-                        Console.WriteLine("¿Qué coche deseas actualizar (Ingresa la Marca)");
-                        string actu = Console.ReadLine();
-
-                        program.ActualizarCoche(actu);
+                        program.ActualizarCoche();
 
                         break;
                     case Menu.AgregarCamion:
@@ -62,10 +57,8 @@ namespace herencia
 
                         break;
                     case Menu.ActualizarCamion:
-                        Console.WriteLine("¿Qué camion deseas actualizar (Ingresa la Marca");
-                        string actua = Console.ReadLine();
 
-                        program.ActualizarCamion(actua);
+                        program.ActualizarCamion();
 
                         break;
                     default:

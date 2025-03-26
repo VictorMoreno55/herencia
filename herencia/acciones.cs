@@ -28,7 +28,6 @@ namespace herencia
             int Puertas = Convert.ToInt32(Console.ReadLine());
 
             DiccCoche.Add(ID, new VehiculoCoche(vca.ID_Vehiculo, vca.Marca, vca.Modelo, vca.Año, vca.Puertas));
-            DiccCoche.Add(ID, vca);
         }
         public void MostrarCoche()
         {
@@ -45,13 +44,14 @@ namespace herencia
         {
             Console.WriteLine($"Total Coches:{DiccCoche.Count}");
         }
-        public void EliminarCoche(string marca)
+        public void EliminarCoche()
         {
             Console.WriteLine("Dame ID a eliminar");
             int id = Convert.ToInt32(Console.ReadLine());
+
             DiccCoche.Remove(id);
         }
-        public void ActualizarCoche(string nombremarcas)
+        public void ActualizarCoche()
         {
             Console.WriteLine("Dame ID");
             int ID = Convert.ToInt32(Console.ReadLine());
@@ -85,7 +85,6 @@ namespace herencia
             int Puertas = Convert.ToInt32(Console.ReadLine());
 
             DiccCamion.Add(ID, new VehiculoCamion(vco.ID_Vehiculo, vco.Marca, vco.Modelo, vco.Año, vco.CapacidadDeCarga));
-            DiccCamion.Add(ID, vco);
         }
         public void MostrarCamion()
         {
@@ -108,7 +107,7 @@ namespace herencia
             int id = Convert.ToInt32(Console.ReadLine());
             DiccCamion.Remove(id);
         }
-        public void ActualizarCamion(string nombremarca)
+        public void ActualizarCamion()
         {
             Console.WriteLine("Dame ID");
             int ID = Convert.ToInt32(Console.ReadLine());
